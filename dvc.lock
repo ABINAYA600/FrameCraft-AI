@@ -1,0 +1,22 @@
+schema: '2.0'
+stages:
+  prepare_mlop_dataset:
+    cmd: cd backend && python -m mlops.dvc_prepare
+    deps:
+    - path: backend/mlops/dvc_prepare.py
+      hash: md5
+      md5: 6412feb1753d1de52a17c6746c08d9c4
+      size: 901
+    - path: backend/output/live_comment_events.json
+      hash: md5
+      md5: d41d8cd98f00b204e9800998ecf8427e
+      size: 0
+    - path: backend/output/mlops/analytics_snapshots.jsonl
+      hash: md5
+      md5: d41d8cd98f00b204e9800998ecf8427e
+      size: 0
+    outs:
+    - path: backend/output/mlops/datasets/engagement_training.csv
+      hash: md5
+      md5: fa7cd7d39f893b417762ecc95caa6052
+      size: 125

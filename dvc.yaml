@@ -1,0 +1,13 @@
+stages:
+
+  prepare_mlop_dataset:
+
+    cmd: cd backend && python -m mlops.dvc_prepare
+
+    deps:
+      - backend/mlops/dvc_prepare.py
+      - backend/output/live_comment_events.json
+      - backend/output/mlops/analytics_snapshots.jsonl
+
+    outs:
+      - backend/output/mlops/datasets/engagement_training.csv
