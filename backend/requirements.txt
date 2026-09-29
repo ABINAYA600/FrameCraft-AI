@@ -4,3 +4,4 @@ scikit-learn>=1.5,<2
 joblib>=1.4,<2
 mlflow>=3.0,<4
 dvc>=3.50,<4
+google-auth-oauthlib>=1.2,<2
